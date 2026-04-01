@@ -21,8 +21,9 @@ from __future__ import annotations
 
 import logging
 import os
+from collections.abc import Iterator
 from dataclasses import dataclass, field
-from typing import Any, Generator
+from typing import Any
 
 import requests
 
@@ -203,7 +204,7 @@ class FabricClient:
 
     def _paginate(
         self, method: str, path: str, params: dict | None = None
-    ) -> Generator[dict, None, None]:
+    ) -> Iterator[dict]:
         """
         Yield successive pages from a paginated Fabric list endpoint.
 
