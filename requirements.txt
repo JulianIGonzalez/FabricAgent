@@ -1,0 +1,8 @@
+# Microsoft Authentication Library — handles both Service Principal and Delegated flows
+msal==1.35.1
+
+# HTTP client for calling Fabric REST API
+requests==2.31.0
+
+# Loads credentials from a local .env file (never committed to source control)
+python-dotenv==1.2.2
